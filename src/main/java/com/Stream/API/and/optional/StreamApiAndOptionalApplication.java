@@ -1,4 +1,4 @@
-package com.Stream.API.and.optional.Stream.API.and.optional;
+package com.Stream.API.and.optional;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
