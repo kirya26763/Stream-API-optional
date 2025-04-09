@@ -4,12 +4,13 @@ import com.Stream.API.and.optional.employee.Employee;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 @Service
 public class EmployeeService {
-    private Map<String,Employee> employees = Map.of(
+    private final Map<String,Employee> employees = new HashMap<>(Map.of(
            "Дмитрий" ,new Employee("Дмитрий", "Иванов", "Александрович", 152100, "1"),
            "Олег" ,new Employee("Олег", "Дмитрев", "Евгеневич", 152000, "1"),
            "Вадим" ,new Employee("Вадим", "Стрельников", "Никитич", 100020, "2"),
@@ -19,9 +20,9 @@ public class EmployeeService {
            "Алексей" ,new Employee("Алексей", "Матросов", "Михаилович", 60001, "4"),
            "Михаил" ,new Employee("Михаил", "Берегов", "Алексеевич", 60000, "4"),
            "Кирилл" ,new Employee("Кирилл", "Артемьев", "Владимирович", 45097, "5"),
-           "Никита" ,new Employee("Никита", "Голубцов", "Григорьевичь", 45000, "5"));
+           "Никита" ,new Employee("Никита", "Голубцов", "Григорьевичь", 45000, "5")));
 
     public List<Employee> allEmployees() {
-        return new ArrayList<>();
+        return new ArrayList<>(employees.values());
     }
 }
