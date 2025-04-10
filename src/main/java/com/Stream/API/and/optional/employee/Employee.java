@@ -3,9 +3,9 @@ package com.Stream.API.and.optional.employee;
 import java.util.Objects;
 
 public class Employee {
-    private String firstName;
-    private String lastName;
-    private String middleName;
+    private final String firstName;
+    private final String lastName;
+    private final String middleName;
     private int salary;
     private String department;
 
@@ -52,7 +52,12 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee - " + firstName + ' ' + lastName + ' ' + middleName + " ЗП - " + salary +
-                " отдел " + department;
+        return "Employee{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", salary=" + salary +
+                ", department='" + department + '\'' +
+                '}';
     }
 }

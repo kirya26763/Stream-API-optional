@@ -39,4 +39,10 @@ public class DepartmentService {
                 .filter(employee -> employee.getDepartment().equals(department))
                 .collect(Collectors.groupingBy(Employee::getDepartment));
     }
+
+    public Map<String, List<Employee>> allEmployeeDepartment() {
+        List<Employee> employees = employeeService.allEmployees();
+        return employees.stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment));
+    }
 }

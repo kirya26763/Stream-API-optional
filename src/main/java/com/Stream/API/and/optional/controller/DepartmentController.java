@@ -15,17 +15,17 @@ import java.util.Map;
 @RequestMapping("/departments")
 public class DepartmentController {
 
-    private DepartmentService departmentService;
+    public DepartmentService departmentService;
 
-    private EmployeeService employeeService;
+    public EmployeeService employeeService;
 
     public DepartmentController(DepartmentService departmentService, EmployeeService employeeService) {
         this.departmentService = departmentService;
         this.employeeService = employeeService;
     }
     @GetMapping("/max-salary")
-    public Employee employeeMaxSalaryDepartment(@RequestParam("departmentId") String departmentId){
-        return departmentService.employeeMaxSalaryDepartment(departmentId);
+    public Employee employeeMaxSalaryDepartment(@RequestParam("departmentId") String department){
+        return departmentService.employeeMaxSalaryDepartment(department);
     }
     @GetMapping("/min-salary")
     public Employee employeeMinSalaryDepartment(@RequestParam("departmentId") String departmentId){
