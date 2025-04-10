@@ -23,17 +23,20 @@ public class DepartmentController {
         this.departmentService = departmentService;
         this.employeeService = employeeService;
     }
+
     @GetMapping("/max-salary")
-    public Employee employeeMaxSalaryDepartment(@RequestParam("departmentId") String department){
+    public Employee employeeMaxSalaryDepartment(@RequestParam("departmentId") String department) {
         return departmentService.employeeMaxSalaryDepartment(department);
     }
+
     @GetMapping("/min-salary")
-    public Employee employeeMinSalaryDepartment(@RequestParam("departmentId") String departmentId){
+    public Employee employeeMinSalaryDepartment(@RequestParam("departmentId") String departmentId) {
         return departmentService.employeeMinSalaryDepartment(departmentId);
     }
+
     @GetMapping("/all")
-    public Map<String, List<Employee>> allEmployeeDepartment(@RequestParam(value = "departmentId",required = false)String departmentId){
-        if (departmentId==null){
+    public Map<String, List<Employee>> allEmployeeDepartment(@RequestParam(value = "departmentId", required = false) String departmentId) {
+        if (departmentId == null) {
             return departmentService.allEmployeeDepartment(departmentId);
         }
         return departmentService.allEmployeeDepartment(departmentId);
