@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class StreamApiAndOptionalApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(StreamApiAndOptionalApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(StreamApiAndOptionalApplication.class, args);
+    }
 
 }
